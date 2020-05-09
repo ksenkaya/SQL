@@ -49,7 +49,7 @@ SELECT
 FROM
     salaries
 
--- #2: The rank of each employee based on their salary within their department
+-- #3: The rank of each employee based on their salary within their department
 SELECT 
     *, 
     RANK() OVER(PARTITION BY depname ORDER BY salary DESC) salary_rank
