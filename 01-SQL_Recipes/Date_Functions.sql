@@ -38,14 +38,14 @@ SELECT CURRENT_DATE AS date,
        LOCALTIMESTAMP AS localtimestamp,
        NOW() AS now
 
--- Creating time series data
+-- Creating time series data for the next 12 months by days
     SELECT 
         date::date
 
     FROM generate_series
     (
       date_trunc('month', current_date)::date,
-      (date_trunc('month', current_date) + interval '1 MONTH - 1 day')::date,
+      (date_trunc('month', current_date) + interval '12 MONTH - 1 day')::date,
       '1 day'::interval
     )date
 ;
