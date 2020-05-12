@@ -2,14 +2,14 @@
 
 -- Display NULLs as 'Missing'
 SELECT s.category,
-       coalesce(s.category, 'Missing') AS CategoryFill
+       COALESCE(s.category, 'Missing') AS category_filled
 FROM sales s
 
 -- Fill NULLs with Avg
 SELECT s.amount ,
        coalesce(s.amount,
-                  ( SELECT avg(amount)
-                   FROM sales) ) AS Amount_Filling
+                  ( SELECT AVG(amount)
+                   FROM sales) ) AS amount_filled
 FROM sales s
 
 -- Display NULLs as 0
