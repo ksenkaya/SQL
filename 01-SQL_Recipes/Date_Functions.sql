@@ -11,13 +11,13 @@
 
 
 -- Difference between two dates in minutes or seconds
-EXTRACT('EPOCH' FROM started_at - ended_at)
+SELECT EXTRACT('EPOCH' FROM started_at - ended_at)
 
 -- Difference between two dates in days
-DATE_PART('day', ended_at - started_at)
+SELECT DATE_PART('day', ended_at - started_at)
 
 -- Difference between two dates in weeks
-TRUNC(DATE_PART('day', ended_at - started_at) / 7)
+SELECT TRUNC(DATE_PART('day', ended_at - started_at) / 7)
 
 -- Difference between two dates in months
 SELECT EXTRACT(YEAR FROM AGE(ended_at, started_at)) * 12 
@@ -26,7 +26,7 @@ SELECT EXTRACT(YEAR FROM AGE(ended_at, started_at)) * 12
 -- The average time to complete a profile each month
 SELECT DATE_TRUNC('month',started_at) AS month,
        EXTRACT(EPOCH FROM AVG(AGE(ended_at,started_at))) AS avg_seconds
-  FROM modeanalytics.profile_creation_events 
+  FROM events 
  GROUP BY 1
  ORDER BY 1  
 
