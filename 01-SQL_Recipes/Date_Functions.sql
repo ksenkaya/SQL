@@ -38,6 +38,18 @@ SELECT CURRENT_DATE AS date,
        LOCALTIMESTAMP AS localtimestamp,
        NOW() AS now
 
+-- Some useful date functions
+SELECT NOW()::timestamp AS now;
+SELECT NOW()::DATE AS today;
+SELECT DATE_TRUNC('month', now()) AS month_timestap;
+SELECT DATE_TRUNC('hour', now()) AS hour_timestamp;
+
+SELECT EXTRACT(month FROM NOW());
+SELECT EXTRACT(dow from NOW());
+SELECT EXTRACT(month FROM NOW());
+SELECT EXTRACT(day FROM NOW()
+SELECT TO_CHAR(NOW()::timestamp, 'YYYY-MM') AS year_month
+
 -- Creating time series data for the next 12 months by days
     SELECT 
         date::date
