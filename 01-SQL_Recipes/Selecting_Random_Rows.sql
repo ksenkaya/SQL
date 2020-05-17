@@ -1,4 +1,4 @@
--- Select randows rows
+-- Select randows rows to take a sample
 -- Wiki: https://wiki.postgresql.org/wiki/TABLESAMPLE_Implementation
 
 -- Create an 'items' table with a million random numbers and strings
