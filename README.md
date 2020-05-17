@@ -1,2 +1,2 @@
 # SQL
- Common SQL recipes and some practises
+ Common SQL recipes and some practises for data analysis
