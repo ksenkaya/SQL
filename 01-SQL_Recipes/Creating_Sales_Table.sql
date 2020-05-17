@@ -29,7 +29,7 @@ ANALYZE sales;
 
 -- Create some indexes
  CREATE INDEX sales_customer_ix ON sales(customer);
- CREATE INDEX sales_sold_at_ix ON sales(sold_at
+ CREATE INDEX sales_sold_at_ix ON sales(sold_at);
 
 -- Some examples to play around with
 -- #1: What is the discount rate on Shoes?
