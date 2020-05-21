@@ -1,6 +1,7 @@
 -- Calculating Relationships with Correlation Matrix in PostgreSQL
 
 -- Suppose we have Fortune500 dataset, a list of the largest companies in the US published by Fortune Magazine below
+-- Full dataset can be found here: https://www.kaggle.com/vineetjaiswal/fortune500-2017
 
 | rank |          name           | revenues | revenues_change | profits | profits_change |
 |------|-------------------------|----------|-----------------|---------|----------------|
