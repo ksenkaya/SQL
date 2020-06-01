@@ -2,8 +2,8 @@
 
 /*
 The key metrics that businesses use to measure performance and how to calculate them in SQL.
-Such as revenue, cost, profit, the number of registrations, the number of active users, user base growth rate, order growth rate, retention rate, 
- average revenue per user, average orders per user etc.
+Such as revenue, cost, profit, the number of registrations, the number of active users, user base growth rate, order growth rate, 
+retention rate, average revenue per user, average orders per user etc.
 */
 
 -- Suppose we have a food delivery company's data with a few tables, 'meals', 'orders' and 'stock' in the following format
@@ -89,7 +89,7 @@ FROM revenue
 JOIN cost ON revenue.delivr_month = cost.delivr_month
 ORDER BY revenue.delivr_month;
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 -- User-centric metrics
 
 -- #1: Registrations by month
@@ -105,7 +105,7 @@ SELECT
   COUNT(DISTINCT user_id) AS regs
 FROM reg_dates
 GROUP BY delivr_month
-ORDER BY delivr_month; 
+ORD--ER BY delivr_month; 
 
 -- #2: Monthly active users (MAU)
 SELECT
@@ -226,7 +226,7 @@ AND previous.delivr_month = (current.delivr_month - INTERVAL '1 month')
 GROUP BY previous.delivr_month
 ORDER BY previous.delivr_month;
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
 -- Performance per unit, as opposed to overall performance and distributions
 
