@@ -1,4 +1,4 @@
--- Pivoting in SQL with CROSSTAB() function
+-- Pivoting tables in PostgreSQL with CROSSTAB() function
 -- Pivoting converts a 'long' table into a 'wide' one because they're usually easier to scan
 
 -- Suppose we have a food delivery company's data with a few tables, 'meals', 'orders' and 'stock' in the following format
